@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Computer Vision Projects</title>
+
+    <!-- FontAwesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
     <style>
       :root {
         --primary-color: #4f46e5;
@@ -24,9 +31,7 @@
         flex-direction: column;
         justify-content: center;
 
-        /* Default background - Gradient */
         background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-
         background-color: #f0fdf4;
         background-image: url("https://images.unsplash.com/photo-1531685250784-7569952593d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80");
         background-size: cover;
@@ -41,8 +46,8 @@
       }
 
       .profile-img {
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
         object-fit: cover;
         margin-bottom: 10px;
@@ -73,7 +78,7 @@
       }
 
       .link {
-        background-color: white;
+        background-color: #ffd700;
         color: var(--dark-color);
         padding: 15px;
         border-radius: 12px;
@@ -156,58 +161,95 @@
         position: relative;
         z-index: 2;
       }
+
+      /* Social box */
+      .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 40px;
+        padding: 22px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.02);
+        backdrop-filter: brightness(0.7) blur(4px);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+      }
+
+      .social-links a {
+        background: rgba(255, 255, 255, 0.9);
+        color: var(--dark-color);
+        border-radius: 10px;
+        padding: 10px 14px;
+        text-decoration: none;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.22s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+      }
+
+      .social-links a:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+        background: #ffffff;
+      }
     </style>
   </head>
   <body>
-    <!-- Animated background bubbles -->
-    <div class="bubbles">
-      <div
-        class="bubble"
-        style="left: 10%; width: 40px; height: 40px; animation-delay: 0s"
-      ></div>
-      <div
-        class="bubble"
-        style="left: 20%; width: 20px; height: 20px; animation-delay: 2s"
-      ></div>
-      <div
-        class="bubble"
-        style="left: 35%; width: 30px; height: 30px; animation-delay: 4s"
-      ></div>
-      <div
-        class="bubble"
-        style="left: 50%; width: 25px; height: 25px; animation-delay: 1s"
-      ></div>
-      <div
-        class="bubble"
-        style="left: 65%; width: 35px; height: 35px; animation-delay: 3s"
-      ></div>
-      <div
-        class="bubble"
-        style="left: 80%; width: 15px; height: 15px; animation-delay: 5s"
-      ></div>
-    </div>
-
+    <!-- Profile Section -->
     <div class="profile">
       <img src="./me.jpg" alt="Profile" class="profile-img" />
+      <h1>Ajay Reddy</h1>
+      <p class="subheading bio">
+        🎓 IBM Certified | 💻 Full Stack Developer (MERN, React, Node,
+        TypeScript) | ☁️ Cloud & DevOps (AWS, Docker, CI/CD) | 🤖 AI/ML
+        Practitioner | 🔗 REST APIs, GraphQL & WebSockets | 🏗️ System Design & 
+        Scalable Apps | 🌍 3x Tech Ambassador | 🏆 7x Hackathons
+      </p>
+    </div>
+
+    <!-- Animated background bubbles -->
+    <div class="bubbles">
+      <div class="bubble" style="left: 10%; width: 40px; height: 40px; animation-delay: 0s"></div>
+      <div class="bubble" style="left: 20%; width: 20px; height: 20px; animation-delay: 2s"></div>
+      <div class="bubble" style="left: 35%; width: 30px; height: 30px; animation-delay: 4s"></div>
+      <div class="bubble" style="left: 50%; width: 25px; height: 25px; animation-delay: 1s"></div>
+      <div class="bubble" style="left: 65%; width: 35px; height: 35px; animation-delay: 3s"></div>
+      <div class="bubble" style="left: 80%; width: 15px; height: 15px; animation-delay: 5s"></div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="profile">
       <h1>Computer Vision Projects</h1>
     </div>
 
     <div class="links">
-      <!-- Regular links -->
-
-      <a
-        href="https://devpost.com/software/presenceai"
-        class="link g-link"
-        target="_blank"
-      >
+      <a href="https://devpost.com/software/presenceai" class="link g-link" target="_blank">
         <span>PresenceAI</span>
       </a>
+      <a href="./index.html" class="link"><span>Home</span></a>
+    </div>
 
-      <br />
-      <br />
-      <a href="./index.html" class="link">
-        <span>Home</span>
-      </a>
+    <br /><br /><br /><br />
+
+    <!-- Social Links -->
+    <div class="profile">
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/ajayreddytech/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/ajayreddytech" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://ajayhackz.netlify.app/" target="_blank"><i class="fa-solid fa-globe"></i> Portfolio</a>
+        <a href="https://ajayhacks.netlify.app/" target="_blank"><i class="fa-solid fa-trophy"></i> Hackathons</a>
+        <a href="https://drive.google.com/drive/folders/1UURMV6IbZpyhE84iOi6OcfKV76dvTlB7?usp=sharing" target="_blank"><i class="fa-solid fa-certificate"></i> Certifications</a>
+        <a href="https://drive.google.com/file/d/1bVJ8K0N8ejcJc16ZmxAYtVVOpDgCIGkm/view?usp=sharing" target="_blank"><i class="fa-solid fa-file-lines"></i> Resume</a>
+        <a href="https://leetcode.com/u/_ajayreddytech/" target="_blank"><i class="fa-solid fa-bolt"></i> LeetCode</a>
+        <a href="https://linktr.ee/ajayreddytech" target="_blank"><i class="fa-solid fa-link"></i> LinkTree</a>
+        <a href="https://calendly.com/ajayreddytech" target="_blank"><i class="fa-solid fa-calendar-days"></i> Calendly</a>
+        <a href="mailto:ajayreddy.tech@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+        <a href="tel:+1-437-973-6846"><i class="fa-solid fa-phone"></i> Call</a>
+      </div>
     </div>
 
     <footer>Projects & Professional Work | Ajay Reddy</footer>
